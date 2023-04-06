@@ -1,0 +1,15 @@
+<section>
+  <app-button
+    class="task-btn"
+    (click)="onBtnClick()"
+    text="{{ displayForm ? 'Close' : 'Add' }}"
+    color="{{ displayForm ? 'red' : 'green' }}"
+  ></app-button>
+  <app-create-task *ngIf="displayForm" (create)="createNewTask($event)"></app-create-task>
+  <app-task-item
+    *ngFor="let task of tasks"
+    [task]="task"
+    (dblClick)="toggleTaskReminder($event)"
+    (delete)="deleteTask($event)"
+  ></app-task-item>
+</section>

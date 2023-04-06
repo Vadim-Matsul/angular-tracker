@@ -1,0 +1,41 @@
+.add-form {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 15px 3px;
+  border-top: 1px solid rgba(0, 0, 0, 0.555);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.555);
+}
+
+.add-form input[type='text'] {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.356);
+}
+
+.add-form input[type='text']:focus {
+  outline-color: rgba(40, 182, 75, 0.322);
+}
+
+.add-form::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: -1px;
+  right: -2px;
+
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.151);
+  width: 2px;
+}
+
+.add-form::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -2px;
+
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.151);
+  width: 2px;
+}
